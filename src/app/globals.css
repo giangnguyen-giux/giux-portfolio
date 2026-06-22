@@ -15,3 +15,10 @@ body {
   font-family: var(--font-body);
   overflow-x: hidden;
 }
+
+@layer components {
+  .container-page {
+    @apply mx-auto px-4 md:px-8 xl:px-10 max-w-7xl;
+    min-width: 360px;
+  }
+}

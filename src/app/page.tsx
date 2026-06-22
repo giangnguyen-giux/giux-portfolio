@@ -6,9 +6,9 @@ import Contact from "@/components/contact";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-1">
+      <main className="flex flex-col flex-1">
         <Hero />
         <Features />
         <Pricing />

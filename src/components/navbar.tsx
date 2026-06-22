@@ -4,29 +4,27 @@ import ButtonCTA from "./button-cta";
 
 function Navbar() {
   return (
-    <nav className="w-full sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-foreground/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 pt-10 pb-4 sm:py-6 h-20 sm:h-24 flex items-center justify-between">
+    <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-foreground/5">
+      <div className="container-page h-20 md:h-24 flex items-center justify-between">
         {/* Left Corner: Logo */}
-        <div className="relative h-4 sm:h-7 aspect-66/17">
+        <div className="relative h-4 md:h-7 aspect-66/17">
           <Image src="/logo.svg" alt="Logo" fill className="object-contain" />
         </div>
 
         {/* Center: Logo */}
-        <div className="relative h-9 sm:h-14 aspect-82/36">
+        <div className="relative h-9 md:h-14 aspect-82/36">
           <Image
             src="/logo-center.svg"
-            alt="Logo"
+            alt="Logo Center"
             fill
             className="object-contain"
           />
         </div>
 
         {/* Right Corner: CTA Button */}
-        <div className="flex items-center">
-          <ButtonCTA className="px-2 py-1 sm:px-12 sm:py-3">
-            Contact Us
-          </ButtonCTA>
-        </div>
+        <ButtonCTA className="px-2 md:px-12 py-1 md:py-3 text-sm md:text-base">
+          Contact Us
+        </ButtonCTA>
       </div>
     </nav>
   );
