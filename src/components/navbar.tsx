@@ -11,16 +11,6 @@ function Navbar() {
           <Image src="/logo.svg" alt="Logo" fill className="object-contain" />
         </div>
 
-        {/* Center: Logo */}
-        <div className="relative h-9 md:h-14 aspect-82/36">
-          <Image
-            src="/logo-center.svg"
-            alt="Logo Center"
-            fill
-            className="object-contain"
-          />
-        </div>
-
         {/* Right Corner: CTA Button */}
         <ButtonCTA className="px-2 md:px-12 py-1 md:py-3 text-sm md:text-base">
           Contact Us

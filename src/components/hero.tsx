@@ -9,7 +9,7 @@ function Hero() {
     <section className="relative py-14 md:py-16 xl:py-32 overflow-hidden">
       <div className="container-page flex flex-col gap-8 md:gap-12">
         {/* Content Block (Text + CTA) */}
-        <h1 className="font-heading font-medium text-2xl md:text-4xl xl:text-6xl xl:max-w-3xl text-foreground">
+        <h1 className="font-heading font-medium text-2xl md:text-4xl xl:text-6xl text-foreground">
           Professional Web Design <br />
           for <span className="text-brand-primary">SMEs</span> and{" "}
           <span className="text-brand-primary">F&B</span>
@@ -33,8 +33,7 @@ function Hero() {
         </ButtonCTA>
 
         {/* Image Block Laptop */}
-        <div className="relative w-full pt-2">
-          <div className="relative md:absolute w-full md:w-3/4 md:-translate-y-2/3 z-0 aspect-326/172">
+          <div className="relative md:absolute w-full md:w-auto md:h-[70%] lg:h-[80%] md:right-0 z-0 aspect-326/172">
             <Image
               src="/mockup-desktop.png"
               alt="GiUX Premium Web Interface Showcase"
@@ -43,7 +42,6 @@ function Hero() {
               className="object-contain"
             />
           </div>
-        </div>
       </div>
     </section>
   );
