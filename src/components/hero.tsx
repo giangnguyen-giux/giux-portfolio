@@ -6,7 +6,7 @@ const tags = ["Under-2s Load Times", "High Conversion", "Clean Code"];
 
 function Hero() {
   return (
-    <section className="relative py-14 md:py-16 xl:py-32 overflow-hidden">
+    <section className="padding-section">
       <div className="container-page flex flex-col gap-8 md:gap-12">
         {/* Content Block (Text + CTA) */}
         <h1 className="font-heading font-medium text-2xl md:text-4xl xl:text-6xl text-foreground">
@@ -16,11 +16,11 @@ function Hero() {
         </h1>
 
         {/* Tag Group */}
-        <div className="flex flex-col gap-4 md:gap-6">
+        <div className="flex flex-col gap-4 xl:gap-6">
           {tags.map((tag) => (
             <span
               key={tag}
-              className="px-2 py-1 bg-brand-primary/20 rounded-lg text-base text-foreground font-body w-fit"
+              className="px-4 py-2 bg-brand-primary/20 rounded-full text-base text-foreground font-body w-fit"
             >
               {tag}
             </span>
@@ -33,9 +33,9 @@ function Hero() {
         </ButtonCTA>
 
         {/* Image Block Laptop */}
-          <div className="relative md:absolute w-full md:w-auto md:h-[70%] lg:h-[80%] md:right-0 z-0 aspect-326/172">
+          <div className="relative md:absolute w-full md:w-auto md:h-[70%] lg:h-[80%] md:right-0 z-0 aspect-video">
             <Image
-              src="/mockup-desktop.png"
+              src="/mockup-desktop.webp"
               alt="GiUX Premium Web Interface Showcase"
               fill
               priority

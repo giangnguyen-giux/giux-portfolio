@@ -4,9 +4,9 @@ import ButtonBorder from "./button-border";
 
 function Stat() {
     return (
-  <section className="container-section bg-slate-800 overflow-hidden">
+  <section className="padding-section bg-slate-800 overflow-hidden">
     <div className="container-page flex flex-col gap-4 md:gap-6 items-center text-center">
-      <h2 className="font-heading font-medium text-2xl md:text-3xl xl:text-5xl text-foreground">
+      <h2 className="font-heading font-medium text-2xl md:text-3xl xl:text-5xl tracking-wider text-foreground">
         <span className="text-brand-primary">30%</span> More Conversions <br />
         <span className="text-brand-primary">Under-2-Second</span> Load Times
       </h2>

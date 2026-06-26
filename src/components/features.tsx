@@ -1,6 +1,5 @@
 import React from "react";
 import { Hourglass, TriangleAlert, EyeOff, LucideIcon } from "lucide-react";
-import { features } from "process";
 
 type Feature = {
   id: number;
@@ -42,10 +41,10 @@ const featuresData: Feature[] = [
   },
 ];
 
-function FeatureCard({icon: Icon, title, problem, solution}:Feature){
-  return(
-    <div>
-       {/* Icon */}
+function FeatureCard({ icon: Icon, title, problem, solution }: Feature) {
+  return (
+    <div className="p-4 md:p-6 bg-slate-800 rounded-2xl">
+      {/* Icon */}
       <Icon className="w-12 h-12 mb-4 text-brand-primary" strokeWidth={1} />
 
       {/* Title */}
@@ -57,8 +56,8 @@ function FeatureCard({icon: Icon, title, problem, solution}:Feature){
       <p className="font-body text-slate-400 mb-4">{problem}</p>
 
       {/* Solution */}
-      <div className="pt-4 border-t border-slate-400/20">
-        <span className="inline-block text-xs font-bold uppercase tracking-wider text-brand-primary mb-2">
+      <div className="p-4 bg-slate-900 rounded-lg">
+        <span className="inline-block text-lg font-medium uppercase tracking-wider text-brand-primary mb-2">
           Our Solution
         </span>
         <p className="font-body text-sm text-slate-300">{solution}</p>
@@ -69,19 +68,11 @@ function FeatureCard({icon: Icon, title, problem, solution}:Feature){
 
 function Features() {
   return (
-    <section className="container-section">
-      <div className="container-page flex flex-col gap-8 md:gap-16">
+    <section className="padding-section">
+      <div className="container-page flex flex-col items-center gap-8 md:gap-16">
         {/* Headline */}
-        <div>
-          <h2
-            className="
-            font-heading
-            font-medium
-            text-2xl
-            md:text-3xl
-            xl:text-5xl
-            text-foreground"
-          >
+        <div className="flex flex-col gap-4 text-center">
+          <h2 className="font-heading font-medium text-2xl md:text-3xl xl:text-5xl tracking-wider text-foreground">
             Why your website gets traffic <br />
             but <span className="text-brand-primary">NO CONVERSION?</span>
           </h2>
@@ -93,13 +84,11 @@ function Features() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
           {featuresData.map((feature) => (
-            <FeatureCard key={feature.id} {...feature}/>
+            <FeatureCard key={feature.id} {...feature} />
           ))}
-
         </div>
-
       </div>
     </section>
   );
