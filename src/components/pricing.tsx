@@ -169,7 +169,7 @@ function PlanSelector({ plans, selectedTitle, onSelect }: PlanSelectorProps) {
               ${
                 isActive
                   ? "border-brand-primary bg-brand-primary/10"
-                  : "border-slate-400 hover:border-slate-100 hover:bg-slate-900 bg-background"
+                  : "hover:bg-slate-600 bg-background border-0"
               }`}
           >
             <Icon
@@ -200,11 +200,11 @@ function Pricing() {
   const currentPlan = pricingData.find((plan) => plan.title === selectedTitle);
 
   return (
-    <section className="padding-section bg-slate-800">
+    <section className="padding-section bg-linear-to-b md:bg-linear-to-r from-slate-900 via-slate-800 to-slate-400">
       <div className="container-page flex flex-col gap-4 md:gap-16">
         {/* Headline (Mobile) */}
         <div className="text-center md:hidden">
-          <h2 className="font-heading font-medium text-2xl md:text-5xl text-foreground">
+          <h2 className="font-heading font-medium text-3xl md:text-5xl text-foreground">
             Find Your <span className="text-brand-primary">Right Plan</span>
           </h2>
         </div>
@@ -213,18 +213,18 @@ function Pricing() {
         <div className="block md:hidden mt-4 relative">
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="w-full bg-brand-card border border-slate-700 rounded-2xl px-4 py-3 flex justify-between items-center text-foreground font-body"
+            className="w-full bg-background rounded-2xl px-4 py-3 flex justify-between items-center text-foreground font-body"
           >
-            <span>{selectedTitle}</span>
+            <span className="text-brand-primary">{selectedTitle}</span>
             <span
               className={`transform transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : ""}`}
             >
-              <ChevronDown className="w-5 h-5" />
+              <ChevronDown className="w-5 h-5 text-brand-primary" />
             </span>
           </button>
 
           {isDropdownOpen && (
-            <div className=" absolute left-0 right-0 mt-2 bg-brand-card border border-slate-700 rounded-xl overflow-hidden z-10">
+            <div className=" absolute left-0 right-0 mt-2 bg-background border border-slate-600 rounded-xl overflow-hidden z-10">
               {titles.map((title) => (
                 <button
                   key={title}
@@ -232,7 +232,7 @@ function Pricing() {
                     setSelectedTitle(title);
                     setIsDropdownOpen(false);
                   }}
-                  className={`w-full text-left px-4 py-3 font-body hover:bg-brand-primary/10 transition-colors ${
+                  className={`w-full text-left px-4 py-3 font-body transition-colors ${
                     title === selectedTitle
                       ? "text-brand-primary"
                       : "text-foreground"
@@ -261,7 +261,9 @@ function Pricing() {
 
           {/* Right: Pricing Card */}
           <div className="md:col-span-1">
-            {currentPlan && <PricingCard key={currentPlan.id} {...currentPlan} />}
+            {currentPlan && (
+              <PricingCard key={currentPlan.id} {...currentPlan} />
+            )}
           </div>
         </div>
 
@@ -275,3 +277,4 @@ function Pricing() {
 }
 
 export default Pricing;
+

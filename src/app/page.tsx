@@ -4,6 +4,9 @@ import Stat from "@/components/stat";
 import Features from "@/components/features";
 import Pricing from "@/components/pricing";
 import Contact from "@/components/contact";
+import Project from "@/components/project";
+import Process from "@/components/process";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -14,7 +17,10 @@ export default function Home() {
         <Stat />
         <Features />
         <Pricing />
+        <Project/>
+        <Process/>
         <Contact />
+        <Footer/>
       </main>
     </div>
   );

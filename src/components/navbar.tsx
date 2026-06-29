@@ -4,7 +4,7 @@ import ButtonCTA from "./button-cta";
 
 function Navbar() {
   return (
-    <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-foreground/5">
+    <nav className="sticky top-0 z-50 bg-background/30 backdrop-blur-xl border-b border-foreground/5">
       <div className="container-page pt-[env(safe-area-insert-top,20px)] pb-5 md:py-6 flex items-center justify-between">
         {/* Left Corner: Logo */}
         <div className="relative h-4 md:h-7 aspect-66/17">
