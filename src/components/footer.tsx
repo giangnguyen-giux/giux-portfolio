@@ -7,8 +7,8 @@ import { MapPin, Phone, Mail } from "lucide-react";
 const FacebookIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="full"
-    height="full"
+    width="100%"
+    height="100%"
     viewBox="0 0 71 72"
     fill="none"
   >
@@ -22,8 +22,8 @@ const FacebookIcon = () => (
 const InstagramIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="full"
-    height="full"
+    width="100%"
+    height="100%"
     viewBox="0 0 71 72"
     fill="none"
   >
@@ -37,8 +37,8 @@ const InstagramIcon = () => (
 const LinkedInIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="full"
-    height="full"
+    width="100%"
+    height="100%"
     viewBox="0 0 72 72"
     fill="none"
   >
@@ -52,8 +52,8 @@ const LinkedInIcon = () => (
 const WechatIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="full"
-    height="full"
+    width="100%"
+    height="100%"
     viewBox="0 0 72 72"
     fill="none"
   >
@@ -71,8 +71,8 @@ const WechatIcon = () => (
 const ZaloIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="full"
-    height="full"
+    width="100%"
+    height="100%"
     viewBox="0 0 24 24"
   >
     <path d="M0 0h24v24H0z" fill="none" />
@@ -115,7 +115,11 @@ export default function Footer() {
                 </div>
 
                 {/* Phone */}
-                <a href="tel:+84358342424">
+                <a
+                  href="tel:+84358342424"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className="flex items-center gap-4 md:gap-6">
                     <div className="icon">
                       <Phone
@@ -131,7 +135,7 @@ export default function Footer() {
                 </a>
 
                 {/* Email */}
-                <a href="mailto:hello@giu">
+                <a href="mailto:hello@giux.studio">
                   <div className="flex items-center gap-4 md:gap-6">
                     <div className="icon">
                       <Mail
@@ -154,10 +158,11 @@ export default function Footer() {
                 </p>
                 <div className="flex gap-6">
                   <a
-                    href="https://u.wechat.com/kMDSX9-W8dkVrLmuuqR9pkc?s=2"
+                    href="/qr-wechat.webp"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="icon"
+                    title="Scan QR to add WeChat"
                   >
                     <WechatIcon />
                   </a>
