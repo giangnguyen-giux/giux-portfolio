@@ -1,145 +1,206 @@
 "use client";
 
 import React from "react";
-import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 
-// Các icon mạng xã hội dùng SVG inline để tránh thiếu thư viện
+// SVG Icon Social
 const FacebookIcon = () => (
-  <svg viewBox="0 0 24 24" className="w-5 h-5 md:w-6 md:h-6 fill-current">
-    <path d="M24 12.073c0-6.627-5.373-12-12-12S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="full"
+    height="full"
+    viewBox="0 0 71 72"
+    fill="none"
+  >
+    <path
+      d="M46.4233 38.6403L47.7279 30.3588H39.6917V24.9759C39.6917 22.7114 40.8137 20.4987 44.4013 20.4987H48.1063V13.4465C45.9486 13.1028 43.7685 12.9168 41.5834 12.8901C34.9692 12.8901 30.651 16.8626 30.651 24.0442V30.3588H23.3193V38.6403H30.651V58.671H39.6917V38.6403H46.4233Z"
+      fill="#020618"
+    />
   </svg>
 );
 
 const InstagramIcon = () => (
-  <svg viewBox="0 0 24 24" className="w-5 h-5 md:w-6 md:h-6 fill-current">
-    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="full"
+    height="full"
+    viewBox="0 0 71 72"
+    fill="none"
+  >
+    <path
+      d="M27.3762 35.7808C27.3762 31.1786 31.1083 27.4468 35.7132 27.4468C40.3182 27.4468 44.0522 31.1786 44.0522 35.7808C44.0522 40.383 40.3182 44.1148 35.7132 44.1148C31.1083 44.1148 27.3762 40.383 27.3762 35.7808ZM22.8683 35.7808C22.8683 42.8708 28.619 48.618 35.7132 48.618C42.8075 48.618 48.5581 42.8708 48.5581 35.7808C48.5581 28.6908 42.8075 22.9436 35.7132 22.9436C28.619 22.9436 22.8683 28.6908 22.8683 35.7808ZM46.0648 22.4346C46.0646 23.0279 46.2404 23.608 46.5701 24.1015C46.8997 24.595 47.3684 24.9797 47.9168 25.2069C48.4652 25.4342 49.0688 25.4939 49.6511 25.3784C50.2334 25.2628 50.7684 24.9773 51.1884 24.5579C51.6084 24.1385 51.8945 23.6041 52.0105 23.0222C52.1266 22.4403 52.0674 21.8371 51.8404 21.2888C51.6134 20.7406 51.2289 20.2719 50.7354 19.942C50.2418 19.6122 49.6615 19.436 49.0679 19.4358H49.0667C48.2708 19.4361 47.5077 19.7522 46.9449 20.3144C46.3821 20.8767 46.0655 21.6392 46.0648 22.4346ZM25.6072 56.1302C23.1683 56.0192 21.8427 55.6132 20.9618 55.2702C19.7939 54.8158 18.9606 54.2746 18.0845 53.4002C17.2083 52.5258 16.666 51.6938 16.2133 50.5266C15.8699 49.6466 15.4637 48.3214 15.3528 45.884C15.2316 43.2488 15.2073 42.4572 15.2073 35.781C15.2073 29.1048 15.2336 28.3154 15.3528 25.678C15.4639 23.2406 15.8731 21.918 16.2133 21.0354C16.668 19.8682 17.2095 19.0354 18.0845 18.1598C18.9594 17.2842 19.7919 16.7422 20.9618 16.2898C21.8423 15.9466 23.1683 15.5406 25.6072 15.4298C28.244 15.3086 29.036 15.2844 35.7132 15.2844C42.3904 15.2844 43.1833 15.3106 45.8223 15.4298C48.2612 15.5408 49.5846 15.9498 50.4677 16.2898C51.6356 16.7422 52.4689 17.2854 53.345 18.1598C54.2211 19.0342 54.7615 19.8682 55.2161 21.0354C55.5595 21.9154 55.9658 23.2406 56.0767 25.678C56.1979 28.3154 56.2221 29.1048 56.2221 35.781C56.2221 42.4572 56.1979 43.2466 56.0767 45.884C55.9656 48.3214 55.5573 49.6462 55.2161 50.5266C54.7615 51.6938 54.2199 52.5266 53.345 53.4002C52.4701 54.2738 51.6356 54.8158 50.4677 55.2702C49.5872 55.6134 48.2612 56.0194 45.8223 56.1302C43.1855 56.2514 42.3934 56.2756 35.7132 56.2756C29.033 56.2756 28.2432 56.2514 25.6072 56.1302ZM25.4001 10.9322C22.7371 11.0534 20.9174 11.4754 19.3282 12.0934C17.6824 12.7316 16.2892 13.5878 14.897 14.977C13.5047 16.3662 12.6502 17.7608 12.0116 19.4056C11.3933 20.9948 10.971 22.8124 10.8497 25.4738C10.7265 28.1394 10.6982 28.9916 10.6982 35.7808C10.6982 42.57 10.7265 43.4222 10.8497 46.0878C10.971 48.7494 11.3933 50.5668 12.0116 52.156C12.6502 53.7998 13.5049 55.196 14.897 56.5846C16.289 57.9732 17.6824 58.8282 19.3282 59.4682C20.9204 60.0862 22.7371 60.5082 25.4001 60.6294C28.0687 60.7506 28.92 60.7808 35.7132 60.7808C42.5065 60.7808 43.3592 60.7526 46.0264 60.6294C48.6896 60.5082 50.5081 60.0862 52.0983 59.4682C53.7431 58.8282 55.1373 57.9738 56.5295 56.5846C57.9218 55.1954 58.7745 53.7998 59.4149 52.156C60.0332 50.5668 60.4575 48.7492 60.5768 46.0878C60.698 43.4202 60.7262 42.57 60.7262 35.7808C60.7262 28.9916 60.698 28.1394 60.5768 25.4738C60.4555 22.8122 60.0332 20.9938 59.4149 19.4056C58.7745 17.7618 57.9196 16.3684 56.5295 14.977C55.1395 13.5856 53.7431 12.7316 52.1003 12.0934C50.5081 11.4754 48.6894 11.0514 46.0284 10.9322C43.3612 10.811 42.5085 10.7808 35.7152 10.7808C28.922 10.7808 28.0687 10.809 25.4001 10.9322Z"
+      fill="#020618"
+    />
   </svg>
 );
 
 const LinkedInIcon = () => (
-  <svg viewBox="0 0 24 24" className="w-5 h-5 md:w-6 md:h-6 fill-current">
-    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="full"
+    height="full"
+    viewBox="0 0 72 72"
+    fill="none"
+  >
+    <path
+      d="M24.7612 55.999V28.3354H15.5433V55.999H24.7621H24.7612ZM20.1542 24.5591C23.3679 24.5591 25.3687 22.4348 25.3687 19.7801C25.3086 17.065 23.3679 15 20.2153 15C17.0605 15 15 17.065 15 19.7799C15 22.4346 17.0001 24.5588 20.0938 24.5588H20.1534L20.1542 24.5591ZM29.8633 55.999H39.0805V40.5521C39.0805 39.7264 39.1406 38.8985 39.3841 38.3088C40.0502 36.6562 41.5668 34.9455 44.1138 34.9455C47.4484 34.9455 48.7831 37.4821 48.7831 41.2014V55.999H58V40.1376C58 31.6408 53.4532 27.6869 47.3887 27.6869C42.4167 27.6869 40.233 30.4589 39.0198 32.347H39.0812V28.3364H29.8638C29.9841 30.9316 29.8631 56 29.8631 56L29.8633 55.999Z"
+      fill="#020618"
+    />
   </svg>
 );
 
-const Footer = () => {
+const WechatIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="full"
+    height="full"
+    viewBox="0 0 72 72"
+    fill="none"
+  >
+    <path
+      d="M45.8956 26.0879C46.8845 26.0879 47.8503 26.1701 48.8032 26.2876C47.0805 18.7224 39.1346 13 29.5799 13C18.7651 13 10 20.3257 10 29.3599C10 34.5686 12.9306 39.1897 17.4761 42.1798L14.8948 47.3562L21.9268 44.336C23.4347 44.873 25.0016 45.3152 26.6753 45.521C26.4465 44.5226 26.3166 43.4991 26.3166 42.4487C26.3166 33.4273 35.0976 26.0879 45.8956 26.0879ZM36.1064 20.3615C37.4577 20.3615 38.5536 21.4608 38.5536 22.8158C38.5536 24.1713 37.4578 25.2698 36.1064 25.2698C34.7543 25.2698 33.6589 24.1713 33.6589 22.8158C33.6589 21.4607 34.7543 20.3615 36.1064 20.3615ZM23.0531 25.2698C21.7016 25.2698 20.6057 24.1713 20.6057 22.8158C20.6057 21.4608 21.7017 20.3615 23.0531 20.3615C24.4045 20.3615 25.5006 21.4608 25.5006 22.8158C25.5005 24.1713 24.4044 25.2698 23.0531 25.2698Z"
+      fill="#020618"
+    />
+    <path
+      d="M62.2121 42.4484C62.2121 35.22 54.9051 29.3599 45.8956 29.3599C36.8858 29.3599 29.5799 35.22 29.5799 42.4484C29.5799 49.6763 36.8858 55.5365 45.8956 55.5365C47.3773 55.5365 48.7867 55.3271 50.1542 55.0297L58.9489 58.8084L55.9072 52.713C59.7191 50.3174 62.2121 46.6335 62.2121 42.4484ZM41.001 41.6303C39.6496 41.6303 38.5534 40.5314 38.5534 39.1757C38.5534 37.8207 39.6495 36.7222 41.001 36.7222C42.3528 36.7222 43.4482 37.8212 43.4482 39.1757C43.4482 40.5316 42.3526 41.6303 41.001 41.6303ZM50.7905 41.6303C49.4385 41.6303 48.3433 40.5314 48.3433 39.1757C48.3433 37.8207 49.4384 36.7222 50.7905 36.7222C52.1425 36.7222 53.238 37.8212 53.238 39.1757C53.238 40.5316 52.1425 41.6303 50.7905 41.6303Z"
+      fill="#020618"
+    />
+  </svg>
+);
+
+const ZaloIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="full"
+    height="full"
+    viewBox="0 0 24 24"
+  >
+    <path d="M0 0h24v24H0z" fill="none" />
+    <path
+      fill="#020618"
+      d="M12.49 10.272v-.45h1.347v6.322h-.77a.576.576 0 0 1-.577-.573v.001a3.27 3.27 0 0 1-1.938.632a3.284 3.284 0 0 1-3.284-3.282a3.284 3.284 0 0 1 3.284-3.282a3.27 3.27 0 0 1 1.937.632zM6.919 7.79v.205c0 .382-.051.694-.3 1.06l-.03.034a8 8 0 0 0-.242.285L2.024 14.8h4.895v.768a.576.576 0 0 1-.577.576H0v-.362c0-.443.11-.641.25-.847L4.858 9.23H.192V7.79zm8.551 8.354a.48.48 0 0 1-.48-.48V7.79h1.441v8.354zM20.693 9.6a3.306 3.306 0 1 1 .002 6.612a3.306 3.306 0 0 1-.002-6.612m-10.14 5.253a1.932 1.932 0 1 0 0-3.863a1.932 1.932 0 0 0 0 3.863m10.14-.003a1.945 1.945 0 1 0 0-3.89a1.945 1.945 0 0 0 0 3.89"
+    />
+  </svg>
+);
+
+export default function Footer() {
   return (
-    <section className="padding-section container-page bg-background relative">
-      <div className="grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-20 items-start">
-        {/* Cột Trái: Thông tin & Follow Us */}
-        <div className="flex flex-col relative z-10">
-          {/* Tiêu đề mờ */}
-          <h2 className="text-4xl md:text-6xl xl:text-7xl font-heading font-bold text-foreground/10 tracking-tight mb-8 select-none">
-            Contact Us
-          </h2>
+    <section className="padding-section">
+      <div className="container-page">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-6">
+          {/* Left: Info and Follow */}
+          <div className=" md:col-span-5 md:col-start-1">
+            <div className="flex flex-col relative z-10 gap-8 md:gap-6">
+              {/* Headline */}
+              <h2 className="text-4xl md:text-5xl font-heading font-medium text-foreground md:mb-4">
+                Contact Us
+              </h2>
 
-          {/* Thông tin liên hệ */}
-          <div className="flex flex-col gap-8 mb-10">
-            {/* Địa chỉ */}
-            <div className="flex items-start gap-4">
-              <div className="shrink-0 w-12 h-12 rounded-full bg-brand-primary flex items-center justify-center">
-                <MapPin className="w-6 h-6 text-background" strokeWidth={2.5} />
-              </div>
-              <div>
-                <p className="text-foreground/30 font-medium text-lg mb-1">
-                  Address
-                </p>
-                <p className="text-foreground/60 text-base leading-relaxed">
-                  1452C, Tan My, Tan Dong Hiep, Ho Chi Minh City
-                </p>
-              </div>
-            </div>
+              {/* Info Contact */}
+              <div className="flex flex-col gap-6 md:gap-8">
+                {/* Address */}
+                <div className="flex items-center gap-4 md:gap-6">
+                  <div className="icon">
+                    <MapPin
+                      className="w-6 h-6 text-background"
+                      strokeWidth={2}
+                    />
+                  </div>
+                  <div className="flex flex-col">
+                    <p className="text-slate-500 font-medium">Address</p>
+                    <p className="text-foreground">
+                      1452C, Tan My, Tan Dong Hiep, Ho Chi Minh City
+                    </p>
+                  </div>
+                </div>
 
-            {/* Số điện thoại */}
-            <div className="flex items-start gap-4">
-              <div className="shrink-0 w-12 h-12 rounded-full bg-brand-primary flex items-center justify-center">
-                <Phone className="w-6 h-6 text-background" strokeWidth={2.5} />
-              </div>
-              <div>
-                <p className="text-foreground/30 font-medium text-lg mb-1">
-                  Phone Number
-                </p>
-                <p className="text-foreground/60 text-base leading-relaxed">
-                  +084-358342424
-                </p>
-              </div>
-            </div>
+                {/* Phone */}
+                <a href="tel:+84358342424">
+                  <div className="flex items-center gap-4 md:gap-6">
+                    <div className="icon">
+                      <Phone
+                        className="w-6 h-6 text-background"
+                        strokeWidth={2}
+                      />
+                    </div>
+                    <div className="flex flex-col">
+                      <p className="text-slate-500 font-medium">Phone Number</p>
+                      <p className="text-foreground">+084-358.342.424</p>
+                    </div>
+                  </div>
+                </a>
 
-            {/* Email */}
-            <div className="flex items-start gap-4">
-              <div className="shrink-0 w-12 h-12 rounded-full bg-brand-primary flex items-center justify-center">
-                <Mail className="w-6 h-6 text-background" strokeWidth={2.5} />
+                {/* Email */}
+                <a href="mailto:hello@giu">
+                  <div className="flex items-center gap-4 md:gap-6">
+                    <div className="icon">
+                      <Mail
+                        className="w-6 h-6 text-background"
+                        strokeWidth={2}
+                      />
+                    </div>
+                    <div className="flex flex-col">
+                      <p className="text-slate-500 font-medium">E-Mail</p>
+                      <p className="text-foreground">hello@giux.studio</p>
+                    </div>
+                  </div>
+                </a>
               </div>
-              <div>
-                <p className="text-foreground/30 font-medium text-lg mb-1">
-                  E-Mail
+
+              {/* Follow Us */}
+              <div className="flex flex-col gap-4">
+                <p className="text-foreground text-lg font-medium">
+                  Follow Us:
                 </p>
-                <p className="text-foreground/60 text-base leading-relaxed">
-                  hello@giux.studio
-                </p>
+                <div className="flex gap-6">
+                  <a
+                    href="https://u.wechat.com/kMDSX9-W8dkVrLmuuqR9pkc?s=2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="icon"
+                  >
+                    <WechatIcon />
+                  </a>
+                  <a
+                    href="https://zalo.me/p/6lez3dmbesxl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="icon"
+                  >
+                    <ZaloIcon />
+                  </a>
+                  <a href="#" className=" icon">
+                    <FacebookIcon />
+                  </a>
+                  <a href="#" className=" icon">
+                    <InstagramIcon />
+                  </a>
+                  <a href="#" className=" icon">
+                    <LinkedInIcon />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Follow Us */}
-          <div>
-            <p className="text-foreground/20 text-lg font-medium mb-4">
-              Follow Us:
-            </p>
-            <div className="flex flex-wrap gap-3 md:gap-4">
-              <a
-                href="#"
-                className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-primary flex items-center justify-center hover:brightness-90 transition-all"
-              >
-                <FacebookIcon />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-primary flex items-center justify-center hover:brightness-90 transition-all"
-              >
-                <InstagramIcon />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-primary flex items-center justify-center hover:brightness-90 transition-all"
-              >
-                <LinkedInIcon />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-primary flex items-center justify-center hover:brightness-90 transition-all"
-              >
-                <MessageCircle className="w-5 h-5 md:w-6 md:h-6 text-background" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand-primary flex items-center justify-center hover:brightness-90 transition-all"
-              >
-                <span className="text-background font-bold text-[10px] md:text-xs tracking-tight leading-none select-none">
-                  Zalo
-                </span>
-              </a>
+          {/* Right: Google Map */}
+          <div className="md:col-span-7 md:col-start-6">
+            <div className="w-full h-full rounded-3xl overflow-hidden relative z-0">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d538.1414426634968!2d106.75790927541583!3d10.97476119698315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174db003b821769%3A0x297743c868d40787!2zxJDhuqFpIEzDvSBCxrB1IMSQaeG7h24gKFBob3RvIE5n4buNYyBMYW4p!5e0!3m2!1sen!2s!4v1782747104076!5m2!1sen!2s"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Map location"
+                className="brightness-90 hover:brightness-100 transition-all duration-300"
+              />
             </div>
           </div>
-        </div>
-
-        {/* Cột Phải: Google Map */}
-        <div className="w-full h-75 md:h-112.5 xl:h-137.5 rounded-3xl overflow-hidden shadow-xl relative z-0">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d538.1414426634968!2d106.75790927541583!3d10.97476119698315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174db003b821769%3A0x297743c868d40787!2zxJDhuqFpIEzDvSBCxrB1IMSQaeG7h24gKFBob3RvIE5n4buNYyBMYW4p!5e0!3m2!1sen!2s!4v1782747104076!5m2!1sen!2s"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen={true}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Map location"
-            className="brightness-90 hover:brightness-100 transition-all duration-300"
-          />
         </div>
       </div>
     </section>
   );
-};
-
-export default Footer;
+}

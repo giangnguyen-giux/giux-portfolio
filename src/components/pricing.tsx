@@ -193,7 +193,7 @@ function PlanSelector({ plans, selectedTitle, onSelect }: PlanSelectorProps) {
   );
 }
 
-function Pricing() {
+export default function Pricing() {
   const [selectedTitle, setSelectedTitle] = useState<string>("Landing Page");
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const titles = pricingData.map((plan) => plan.title);
@@ -275,6 +275,3 @@ function Pricing() {
     </section>
   );
 }
-
-export default Pricing;
-

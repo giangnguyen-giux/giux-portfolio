@@ -17,7 +17,7 @@ body {
 }
 
 @utility padding-section {
-  @apply relative py-14 md:py-16 xl:py-32 overflow-hidden;
+  @apply relative py-14 md:py-16 xl:py-20 overflow-hidden;
 }
 
 @utility container-page {
@@ -42,9 +42,21 @@ body {
   animation-play-state: paused !important;
 }
 
-@utility mask-marquee{
-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
--webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+@utility mask-marquee {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 5%,
+    black 95%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 5%,
+    black 95%,
+    transparent
+  );
 }
 
 @utility scrollbar-hide {
@@ -53,4 +65,8 @@ mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transpar
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+@utility icon {
+  @apply w-9 h-9 lg:w-12 lg:h-12 p-1.5 lg:p-2 rounded-full shrink-0 bg-brand-primary flex items-center justify-center hover:brightness-90 transition-all cursor-pointer;
 }
